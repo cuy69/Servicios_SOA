@@ -1,0 +1,25 @@
+{
+  "clientes": [
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "45678912",
+      "nombres": "Lucia Ramirez",
+      "direccion": "Av. Brasil 250, Lima",
+      "telefono": "987654321",
+      "correo": "lucia@example.com",
+      "rol": "remitente",
+      "id": "UF39FQQJgVs"
+    },
+    {
+      "id": "rN_4NOZSNCM",
+      "tipo_documento": "DNI",
+      "numero_documento": "72845136",
+      "nombres": "Mariana ASDADAEUFPAEUFBPAEFUIAPEFEAF",
+      "direccion": "Av. Los Olivos 450",
+      "telefono": "955123456",
+      "correo": "mariana@example.com",
+      "rol": "destinatario"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
