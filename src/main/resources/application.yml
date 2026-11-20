@@ -14,7 +14,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${OAUTH_ISSUER_URI}
+          issuer-uri: ${OAUTH_ISSUER_URI:https://issuer.example}
 server:
   port: ${PORT:8080}
   forward-headers-strategy: framework

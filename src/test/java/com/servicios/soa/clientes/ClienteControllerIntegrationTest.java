@@ -40,10 +40,10 @@ class ClienteControllerIntegrationTest {
         String cliente = """
                 {
                   "tipo_documento": "DNI",
-                  "numero_documento": "12345678",
+                  "numero_documento": "46821357",
                   "nombres": "Ana Pérez",
                   "direccion": "Calle Principal 123",
-                  "telefono": "555123456",
+                  "telefono": "912345678",
                   "correo": "ana@example.com",
                   "rol": "remitente"
                 }
@@ -60,17 +60,17 @@ class ClienteControllerIntegrationTest {
 
         mockMvc.perform(get("/clientes/{id_cliente}", id).with(jwt()))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.numero_documento").value("12345678"))
+                .andExpect(jsonPath("$.numero_documento").value("46821357"))
                 .andExpect(jsonPath("$.rol").value("remitente"));
 
         String actualizacion = """
                 {
                   "tipo_documento": "DNI",
-                  "numero_documento": "12345678",
+                  "numero_documento": "46821357",
                   "nombres": "Ana Pérez Actualizada",
                   "direccion": "Avenida Central 10",
                   "telefono": null,
-                  "correo": null,
+                  "correo": "ana.actualizada@example.com",
                   "rol": "destinatario"
                 }
                 """;
@@ -88,9 +88,10 @@ class ClienteControllerIntegrationTest {
         String cliente = """
                 {
                   "tipo_documento": "DNI",
-                  "numero_documento": "87654321",
+                  "numero_documento": "59731428",
                   "nombres": "Luis Torres",
-                  "direccion": "Calle 1",
+                  "direccion": "Calle Principal 123",
+                  "correo": "luis@example.com",
                   "rol": "destinatario"
                 }
                 """;

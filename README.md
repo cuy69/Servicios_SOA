@@ -1,10 +1,10 @@
 # GestionarCliente
 
-Servicio REST síncrono en Java 17 y Spring Boot para registrar, actualizar y consultar clientes.
+Servicio REST síncrono en Java 25 y Spring Boot para registrar, actualizar y consultar clientes.
 
 ## Requisitos
 
-- Java 17 o superior
+- Java 25 o superior
 - Maven 3.9 o superior
 - Un proveedor OAuth 2.0 / OpenID Connect que emita JWT
 
@@ -16,6 +16,16 @@ Configura `OAUTH_ISSUER_URI` con el issuer de tu proveedor de identidad y ejecut
 $env:OAUTH_ISSUER_URI = "https://identidad.ejemplo.com/issuer"
 mvn spring-boot:run
 ```
+
+Si la variable no se define, la aplicación usa un valor de respaldo `https://issuer.example` para que pueda arrancar en entornos locales sin bloquear el proceso de desarrollo. En producción, reemplázalo por tu issuer real.
+
+Para iniciar el API simulado que persiste en `db.json` y rechaza solicitudes duplicadas, ejecuta desde `src/main/java/com/servicios/soa/clientes/api`:
+
+```powershell
+npm start
+```
+
+Los `POST` duplicados y las actualizaciones `PUT`/`PATCH` que crearían duplicados responden `409 Conflict`: en clientes se compara tipo y número de documento; en envíos, todos los datos excepto `id`. Usa este comando en lugar de `npx json-server db.json` para que se aplique la validación.
 
 La API valida los JWT Bearer usando los metadatos/JWK del issuer. Todas las rutas requieren autenticación. En producción, publica el servicio únicamente detrás de HTTPS (por ejemplo, con un proxy inverso que termine TLS); no envíes tokens ni datos personales por HTTP sin cifrar.
 
@@ -76,3 +86,14 @@ Respuesta:
 - `503 Service Unavailable`: indisponibilidad de la aplicación o sus dependencias.
 
 Los errores de la API contienen `timestamp`, `status`, `error`, `mensaje` y `campos` (con errores de validación por campo).
+
+## RegistrarEnvío con almacenamiento JSON
+
+La API local de Postman se ejecuta desde `src/main/java/com/servicios/soa/clientes/api` con `npm start` y escucha en `http://localhost:3001`.
+
+- `POST /envios` valida UUIDs, peso positivo, contenido, línea de negocio, origen y destino; guarda el envío en `db.json` y responde `201` con `id_envio` y `estado`.
+- `GET /envios/{id_envio}` devuelve los datos persistidos. Un ID mal formado responde `400` y uno inexistente `404`.
+- Los campos inválidos se devuelven juntos con `400`. El contenido se compara sin distinguir mayúsculas ni tildes contra `contenidos_prohibidos` en `db.json`; una coincidencia activa responde `422` con categoría y palabra clave. Un fallo al escribir el archivo responde `503`.
+
+La lista JSON inicial contiene las palabras clave de las seis categorías de contenido prohibido.
+

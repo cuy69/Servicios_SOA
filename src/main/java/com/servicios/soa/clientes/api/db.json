@@ -11,14 +11,375 @@
       "id": "UF39FQQJgVs"
     },
     {
-      "id": "rN_4NOZSNCM",
       "tipo_documento": "DNI",
-      "numero_documento": "72845136",
-      "nombres": "Mariana ASDADAEUFPAEUFBPAEFUIAPEFEAF",
-      "direccion": "Av. Los Olivos 450",
-      "telefono": "955123456",
-      "correo": "mariana@example.com",
-      "rol": "destinatario"
+      "numero_documento": "10101010",
+      "nombres": "Juan Ramos Cuy",
+      "direccion": "Av. Pardo 123",
+      "telefono": "912345567",
+      "correo": "correo@example.pe",
+      "rol": "remitente",
+      "id": "rN_4NOZSNCM"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "",
+      "nombres": "Luis SS",
+      "direccion": "Jr. Simwww",
+      "telefono": "1234ww",
+      "correo": "correo@example.com",
+      "rol": "destinatario",
+      "id": "bOGm3zc2LFk"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "73232323",
+      "nombres": "Luis Garcia",
+      "direccion": "Jr. Simon Boliva",
+      "telefono": "1234556",
+      "correo": "correo@example.com",
+      "rol": "destinatario",
+      "id": "Y_SrDKehUDA"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "73232323",
+      "nombres": "Luis Garcia",
+      "direccion": "Jr. Simon Boliva",
+      "telefono": "1234556",
+      "correo": "correo@example.com",
+      "rol": "destinatario",
+      "id": "NU2gxzKZ770"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "73232323",
+      "nombres": "Luis Garcia",
+      "direccion": "Jr. Simon Boliva",
+      "telefono": "1234556",
+      "correo": "correo@example.com",
+      "rol": "destinatario",
+      "id": "CBgB-lbD4uM"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "1221212",
+      "nombres": "Michicuys",
+      "direccion": "OKOKOK",
+      "telefono": "45245245",
+      "correo": "correo@example.com",
+      "rol": "remitente",
+      "id": "c2826b57-62a1-4b0e-a8ea-9dbdb2e1ae9c"
+    },
+    {
+      "tipo_documento": "DNI",
+      "numero_documento": "78912345",
+      "nombres": "Lomal Ramos",
+      "direccion": "Av. SantaLucia 123",
+      "telefono": "980234567",
+      "correo": "correo123@gmail.com",
+      "rol": "remitente",
+      "id": "363c2ced-194e-4738-a480-23d38f702ab4"
+    },
+    {
+      "tipo_documento": "RUC",
+      "numero_documento": "20131312955",
+      "nombres": "Juan Carlos Ramos",
+      "direccion": "Av. Pardo 123",
+      "telefono": "912345678",
+      "correo": "juan.ramos@example.com",
+      "rol": "remitente",
+      "id": "6b3d03ec-0883-40c3-bff8-489ef1450dff"
+    },
+    {
+      "tipo_documento": "RUC",
+      "numero_documento": "20552103816",
+      "nombres": "Comercial Andina",
+      "direccion": "Av. Bolognesi 123",
+      "telefono": "921234123",
+      "correo": "contacto@andina.com",
+      "rol": "remitente",
+      "id": "78b4547b-47cc-4573-baa3-ba8cb77b1220"
+    }
+  ],
+  "envios": [
+    {
+      "id_remitente": "UUID-del-remitente-creado-en-Cliente",
+      "id_destinatario": "UUID-del-destinatario-creado-en-Cliente",
+      "peso_kg": 2.5,
+      "contenido": "Documentos",
+      "linea_negocio": "Encomienda",
+      "origen": "Chimbote",
+      "destino": "Lima",
+      "id": "WkiEsOCzNCQ"
+    },
+    {
+      "id_remitente": "1313131313",
+      "id_destinatario": "353535535",
+      "peso_kg": 2.6,
+      "contenido": "Documentos",
+      "linea_negocio": "Encomienda",
+      "origen": "Chimbote",
+      "destino": "Lima",
+      "id": "PTSBzZd7DcM"
+    },
+    {
+      "id_remitente": "8d4f9a2c-0e3b-4f61-9c72-5a1b3d7e8f90",
+      "id_destinatario": "a1957e60-826e-4f4c-9a52-53ec0f9a8b21",
+      "peso_kg": 2.5,
+      "contenido": "Libros escolares",
+      "linea_negocio": "Personal",
+      "origen": "Lima",
+      "destino": "Cusco",
+      "id": "c8a74e11-4011-4d78-a3b8-7833e2e25e2a",
+      "estado": "registrado"
+    }
+  ],
+  "contenidos_prohibidos": [
+    {
+      "id": 1,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "arma",
+      "activo": true
+    },
+    {
+      "id": 2,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "pistola",
+      "activo": true
+    },
+    {
+      "id": 3,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "municion",
+      "activo": true
+    },
+    {
+      "id": 4,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "polvora",
+      "activo": true
+    },
+    {
+      "id": 5,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "pirotecnia",
+      "activo": true
+    },
+    {
+      "id": 6,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "bengala",
+      "activo": true
+    },
+    {
+      "id": 7,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "explosivo",
+      "activo": true
+    },
+    {
+      "id": 8,
+      "categoria": "Explosivos y armas",
+      "palabra_clave": "fuegos artificiales",
+      "activo": true
+    },
+    {
+      "id": 9,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "inflamable",
+      "activo": true
+    },
+    {
+      "id": 10,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "aerosol",
+      "activo": true
+    },
+    {
+      "id": 11,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "alcohol",
+      "activo": true
+    },
+    {
+      "id": 12,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "perfume",
+      "activo": true
+    },
+    {
+      "id": 13,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "pintura",
+      "activo": true
+    },
+    {
+      "id": 14,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "fosforo",
+      "activo": true
+    },
+    {
+      "id": 15,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "encendedor",
+      "activo": true
+    },
+    {
+      "id": 16,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "bateria de litio",
+      "activo": true
+    },
+    {
+      "id": 17,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "acido",
+      "activo": true
+    },
+    {
+      "id": 18,
+      "categoria": "Inflamables y peligrosos",
+      "palabra_clave": "corrosivo",
+      "activo": true
+    },
+    {
+      "id": 19,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "muestra medica",
+      "activo": true
+    },
+    {
+      "id": 20,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "infeccioso",
+      "activo": true
+    },
+    {
+      "id": 21,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "radiactivo",
+      "activo": true
+    },
+    {
+      "id": 22,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "hielo seco",
+      "activo": true
+    },
+    {
+      "id": 23,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "animal vivo",
+      "activo": true
+    },
+    {
+      "id": 24,
+      "categoria": "Biológicos y radiactivos",
+      "palabra_clave": "insecto",
+      "activo": true
+    },
+    {
+      "id": 25,
+      "categoria": "Alimentos perecibles",
+      "palabra_clave": "carne",
+      "activo": true
+    },
+    {
+      "id": 26,
+      "categoria": "Alimentos perecibles",
+      "palabra_clave": "fruta fresca",
+      "activo": true
+    },
+    {
+      "id": 27,
+      "categoria": "Alimentos perecibles",
+      "palabra_clave": "lacteo",
+      "activo": true
+    },
+    {
+      "id": 28,
+      "categoria": "Alimentos perecibles",
+      "palabra_clave": "pescado",
+      "activo": true
+    },
+    {
+      "id": 29,
+      "categoria": "Alimentos perecibles",
+      "palabra_clave": "perecible",
+      "activo": true
+    },
+    {
+      "id": 30,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "dinero en efectivo",
+      "activo": true
+    },
+    {
+      "id": 31,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "billete",
+      "activo": true
+    },
+    {
+      "id": 32,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "moneda",
+      "activo": true
+    },
+    {
+      "id": 33,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "cheque al portador",
+      "activo": true
+    },
+    {
+      "id": 34,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "oro",
+      "activo": true
+    },
+    {
+      "id": 35,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "plata",
+      "activo": true
+    },
+    {
+      "id": 36,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "joya",
+      "activo": true
+    },
+    {
+      "id": 37,
+      "categoria": "Dinero y valores",
+      "palabra_clave": "piedra preciosa",
+      "activo": true
+    },
+    {
+      "id": 38,
+      "categoria": "Ilícitos y patrimonio",
+      "palabra_clave": "droga",
+      "activo": true
+    },
+    {
+      "id": 39,
+      "categoria": "Ilícitos y patrimonio",
+      "palabra_clave": "estupefaciente",
+      "activo": true
+    },
+    {
+      "id": 40,
+      "categoria": "Ilícitos y patrimonio",
+      "palabra_clave": "pieza arqueologica",
+      "activo": true
+    },
+    {
+      "id": 41,
+      "categoria": "Ilícitos y patrimonio",
+      "palabra_clave": "patrimonio cultural",
+      "activo": true
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
